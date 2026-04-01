@@ -1,0 +1,36 @@
+Zadanie 1: Filtrator Parzystości (Podstawy yield) 
+Cel: Zrozumienie, jak dodawać logikę do generatora. 
+Treść: Napisz funkcję-generator o nazwie tylko_parzyste(lista), która przyjmuje listę liczb, ale zwraca (yield) tylko te, które są parzyste i dodatkowo mnoży je przez 10. 
+Test: Przeiteruj po liście: [1, 2, 3, 4, 5, 6].
+----------------------------------------------------------------------------------------------
+
+Zadanie 2: Rotator Zadań 
+Cel: Wykorzystanie generatora do nieskończonego przełączania stanów. 
+Napisz generator rotator_zadan(lista_zadan), który w kółko zwraca zadania z podanej listy. Jeśli lista się skończy, generator powinien zacząć od początku.  
+Stwórz listę zadania = ["Nauka", "Sprzątanie", "Relaks"]. 
+Uruchom generator i za pomocą pętli for pobierz dokładnie 7 kolejnych zadań. 
+Wyświetl je w konsoli z numerem kroku. 
+---------------------------------------------------------------------------------------------
+
+Zadanie 3: Akumulator Energii  
+Cel: Stworzenie generatora, który przechowuje stan (sumę) między wywołaniami. 
+Treść: Napisz generator suma_kroczaca(liczby), który przyjmuje listę liczb. Zamiast zwracać te same liczby, generator powinien zwracać aktualną sumę wszystkich dotychczasowych elementów (tzw. running total). 
+Stwórz listę dane = [10, 20, 30, 40]. 
+Uruchom generator i wyświetl wyniki. 
+---------------------------------------------------------------------------------------------
+
+Zadanie 4: Symulator Kursu Giełdowego
+Cel: Wykorzystanie generatora do tworzenia dynamicznych danych w czasie rzeczywistym. 
+Treść: Stwórz generator symulator_gieldy(cena_startowa), który symuluje wahania kursu akcji. W każdej iteracji cena ma się zmienić o losową wartość z zakresu od -5 do +5 jednostek. Generator powinien w nieskończoność zwracać aktualną cenę. 
+Zaimportuj random. 
+Ustaw cenę początkową na 100. 
+Pobierz z generatora 10 kolejnych notowań. 
+Wyświetl je w konsoli, a na koniec dodaj informację, czy "inwestor" zarobił, czy stracił względem ceny startowej. 
+----------------------------------------------------------------------------------------------
+
+Zadanie 5: Wykorzystanie biblioteki itertools
+Cel: Grupowanie strumienia danych w paczki przy minimalnym zużyciu RAM. 
+Treść: Napisz generator paczki_danych(iterable, rozmiar), który przyjmuje dowolny obiekt, po którym można iterować, i dzieli go na listy o długości rozmiar. Ostatnia paczka może być krótsza, jeśli danych nie da się podzielić po równo. 
+Zaimportuj biblioteke itertools. 
+Użyj listy [1, 2, 3, 4, 5, 6, 7] i rozmiaru 3. 
+Wyświetl wynik w pętli for. 
